@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #333;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+  
+.container {
+  text-align: center;
+}
+  
+/* Spinning wheel container */
+#wheel-container {
+  position: relative;
+  z-index: 1; /* Ensure the wheel is below the pop-up */
+}
+
+
+#wheel {
+  width: 100%;
+  height: 100%;
+}
+  
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff5722;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+  
+.btn:hover {
+  background-color: #e64a19;
+}
+  
+/* Pop-up styles */
+#popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  z-index: 1000; /* Higher than the spinning wheel */
+  display: none;
+  width: 80vw;
+  height: auto;
+  max-width: 500px;
+  text-align: center;
+}
+
+  
+#popup img {
+  width: 100%; /* The image will take the full width of the container */
+  height: auto; /* Maintain the aspect ratio */
+  max-height: 70vh; /* Ensure the image doesn’t exceed 70% of the viewport height */
+  border-radius: 10px; /* Rounded corners */
+}
+  
+
+/* Close button */
+#closePopup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff4d4d;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+
+
+a {
+  text-align: center;
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-family: "Jersey 10", sans-serif;
+  color: red;
+}
+
+.top {
+  text-align: center;
+  display: block;
+  position: absolute;
+  top: 50px;
+  font-family: "Jersey 10", sans-serif;
+  color: red;
+}
